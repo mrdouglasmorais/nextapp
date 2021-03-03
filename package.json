@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "server": "json-server -w server.json -p 3333",
+    "server:delay": "json-server -w server.json -p 3333 -d 2000"
   },
   "dependencies": {
     "axios": "^0.21.1",

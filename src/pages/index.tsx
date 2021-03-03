@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
-import axios from 'axios'
-import { Title, Products } from '../styles/pages/Home'
+import axios from 'axios';
 import { GetServerSideProps } from 'next';
+import { Title, Products } from '../styles/pages/Home';
 
 interface IRecomended {
   id: string;
