@@ -11,8 +11,13 @@ interface ICategory {
     products: IProduct[] 
 }
 
-export default function Products( { products } : ICategory){
+export default function Products( { products } : ICategory ){
     const route = useRouter()
+
+    if (route.isFallback){
+        return <p>Carregando...</p>
+    }
+
     return (
         <div>
             <h1>{route.query.slug}</h1>
@@ -26,6 +31,7 @@ export default function Products( { products } : ICategory){
     )
 }
 
+// Método para listagem estática
 export const getStaticPaths: GetStaticPaths = async () => {
     const response = await axios.get(`http://localhost:3333/categories`)
     const categories = response.data
@@ -38,10 +44,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
     return {
         paths,
-        fallback: false
+        fallback: true 
+        //gera o conteudo estático
+
+        // Sempre que o usuário tentar acessar uma rota que não existe, a propriedade do fallback tenta criar este conteudo
     }
 }
 
+//  gerador de conteúdo estático
 export const getStaticProps: GetStaticProps<ICategory> = async ( context ) => {
     const { slug } = context.params
 

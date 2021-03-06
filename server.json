@@ -1,14 +1,16 @@
 {
     "categories": [
         { "id": "camisetas", "title": "Camisetas" },
-        { "id": "calcas", "title": "Calças" }
+        { "id": "calcas", "title": "Calças" },
+        { "id": "meias", "title": "Meias" }
     ],
     "products": [
         { "id": 1, "title": "Camiseta Front-end", "price": 79.90, "category_id": "camisetas", "slug":"camisa-front-ent" },
         { "id": 2, "title": "Camiseta Chapolin", "price": 89.90, "category_id": "calcas", "slug":"camisa-chapolin" },
         { "id": 3, "title": "Calça preta backend", "price": 129.90, "category_id": "calcas", "slug":"calca-preta-backend" },
         { "id": 4, "title": "Calça azul do react", "price": 129.90, "category_id": "camisetas", "slug":"calca-azul-do-react" },
-        {"id": 5, "title": "Calça verde do VueE", "price": 129.90, "category_id": "camisetas", "slug":"calca-azul-do-react" }
+        {"id": 5, "title": "Calça verde do VueE", "price": 129.90, "category_id": "camisetas", "slug":"calca-azul-do-react" },
+        {"id": 6, "title": "Meias reactjs", "price": 59.90, "category_id": "meias", "slug":"meias-node" }
     ],
     "recommended": [
         { "id": 1, "title": "Camiseta Front-end", "price": 79.90, "category_id": "camisetas" },
